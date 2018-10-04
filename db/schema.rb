@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_04_051326) do
+ActiveRecord::Schema.define(version: 2018_10_04_161915) do
 
   create_table "centers", force: :cascade do |t|
     t.string "name_center"
@@ -33,13 +33,13 @@ ActiveRecord::Schema.define(version: 2018_10_04_051326) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.decimal "document"
+    t.decimal "document", precision: 15
     t.string "name"
     t.string "surname"
     t.string "account_contract"
     t.date "birth_date"
     t.string "email"
-    t.decimal "movil"
+    t.decimal "movil", precision: 15
     t.string "username"
     t.string "password"
     t.datetime "date_reg"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2018_10_04_051326) do
     t.string "metrics"
     t.float "delivered"
     t.datetime "delivery_date"
+    t.boolean "verified"
     t.integer "user_id"
     t.integer "type_id"
     t.integer "center_id"

@@ -11,6 +11,6 @@ class VouchersController < ApplicationController
     end 
 
     def recibo_params
-        params.permit(:id, :metrics, :delivered, :delivery_date, :user_id, :type_id, :center_id)
+        params.permit(:id, :metrics, :delivered, :delivery_date, :verified, :user_id, :type_id, :center_id)
     end
 end
