@@ -5,6 +5,11 @@ class CentersController < ApplicationController
         render json: @listar_centros, status: :ok
     end
     
+    def allTypes
+        center = Center.find(params[:id])
+        render json: center.types, status: :ok
+    end
+    
     def create
         @creaCentro = Center.create(center_params)
         

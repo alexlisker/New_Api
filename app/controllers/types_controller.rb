@@ -1,5 +1,6 @@
 class TypesController < ApplicationController
     def index
+        # center = Center.
         @tipo = Type.all
         render json: @tipo, status: :ok
     end
@@ -7,6 +8,8 @@ class TypesController < ApplicationController
     def create
         @nuevomaterial = Type.create(params.permit(:material, :description, :goal_value))
         puts params
+        center = Center.find(params[:center_id])
+        @nuevomaterial.centers << center
         render json: @nuevomaterial, status: :created
     end
 

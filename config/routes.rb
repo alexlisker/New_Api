@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   end
 
   resources :centers do
-      resources :types
+      # resources :types
+    member do
+      get 'allTypes'
+    end
   end
 end

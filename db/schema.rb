@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_04_161915) do
+ActiveRecord::Schema.define(version: 2018_10_04_192441) do
 
   create_table "centers", force: :cascade do |t|
     t.string "name_center"
@@ -22,6 +22,13 @@ ActiveRecord::Schema.define(version: 2018_10_04_161915) do
     t.string "schedule"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "centers_types", id: false, force: :cascade do |t|
+    t.integer "center_id"
+    t.integer "type_id"
+    t.index ["center_id"], name: "index_centers_types_on_center_id"
+    t.index ["type_id"], name: "index_centers_types_on_type_id"
   end
 
   create_table "types", force: :cascade do |t|
@@ -51,7 +58,7 @@ ActiveRecord::Schema.define(version: 2018_10_04_161915) do
     t.string "metrics"
     t.float "delivered"
     t.datetime "delivery_date"
-    t.boolean "verified"
+    t.boolean "verified", default: false
     t.integer "user_id"
     t.integer "type_id"
     t.integer "center_id"
