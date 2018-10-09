@@ -25,6 +25,12 @@ class TypesController < ApplicationController
         render json: @actualizarTipos, status: :updated  
     end
 
+    def show
+        puts params[:id]
+        tipo = Type.find(params[:id])
+        render json: tipo, status: :ok
+    end
+
     def tiporecy_params
         params.permit(:material, :description, :goal_value)
     end
