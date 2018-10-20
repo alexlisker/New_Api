@@ -1,0 +1,49 @@
+https://github.com/pedroumba/vulcano
+
+
+C:\RailsInstaller\Ruby2.3.3\bin;C:\RailsInstaller\Git\cmd;C:\Users\guillisg\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\guillisg\AppData\Roaming\npm;C:\Program Files\PostgreSQL\10\bin
+
+
+
+https://alisker.herokuapp.com/users
+https://alisker.herokuapp.com/centers
+https://alisker.herokuapp.com/types
+
+
+$ rails routes
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+            user_vouchers GET    /users/:user_id/vouchers(.:format)                                                       vouchers#index
+                          POST   /users/:user_id/vouchers(.:format)                                                       vouchers#create
+             user_voucher GET    /users/:user_id/vouchers/:id(.:format)                                                   vouchers#show
+                          PATCH  /users/:user_id/vouchers/:id(.:format)                                                   vouchers#update
+                          PUT    /users/:user_id/vouchers/:id(.:format)                                                   vouchers#update
+                          DELETE /users/:user_id/vouchers/:id(.:format)                                                   vouchers#destroy
+                    users GET    /users(.:format)                                                                         users#index
+                          POST   /users(.:format)                                                                         users#create
+                     user GET    /users/:id(.:format)                                                                     users#show
+                          PATCH  /users/:id(.:format)                                                                     users#update
+                          PUT    /users/:id(.:format)                                                                     users#update
+                          DELETE /users/:id(.:format)                                                                     users#destroy
+             type_centers GET    /types/:type_id/centers(.:format)                                                        centers#index
+                          POST   /types/:type_id/centers(.:format)                                                        centers#create
+              type_center GET    /types/:type_id/centers/:id(.:format)                                                    centers#show
+                          PATCH  /types/:type_id/centers/:id(.:format)                                                    centers#update
+                          PUT    /types/:type_id/centers/:id(.:format)                                                    centers#update
+                          DELETE /types/:type_id/centers/:id(.:format)                                                    centers#destroy
+                    types GET    /types(.:format)                                                                         types#index
+                          POST   /types(.:format)                                                                         types#create
+                     type GET    /types/:id(.:format)                                                                     types#show
+                          PATCH  /types/:id(.:format)                                                                     types#update
+                          PUT    /types/:id(.:format)                                                                     types#update
+                          DELETE /types/:id(.:format)                                                                     types#destroy
+          allTypes_center GET    /centers/:id/allTypes(.:format)                                                          centers#allTypes
+                  centers GET    /centers(.:format)                                                                       centers#index
+                          POST   /centers(.:format)                                                                       centers#create
+                   center GET    /centers/:id(.:format)                                                                   centers#show
+                          PATCH  /centers/:id(.:format)                                                                   centers#update
+                          PUT    /centers/:id(.:format)                                                                   centers#update
+                          DELETE /centers/:id(.:format)                                                                   centers#destroy
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representatio       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_upload
