@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_04_192441) do
+ActiveRecord::Schema.define(version: 2018_10_25_025837) do
 
   create_table "centers", force: :cascade do |t|
     t.string "name_center"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2018_10_04_192441) do
     t.string "schedule"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture"
   end
 
   create_table "centers_types", id: false, force: :cascade do |t|
